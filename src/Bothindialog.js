@@ -134,6 +134,16 @@ class Bothindialog extends React.Component {
         imageSrc = this.webcam.getScreenshot();
         // alert(imageSrc);
         myrecorded = getedspeech;
+
+        var date = new Date().getDate(); 
+        var month = new Date().getMonth() + 1; 
+        var year = new Date().getFullYear(); 
+        var hours = new Date().getHours(); 
+        var min = new Date().getMinutes(); 
+        var sec = new Date().getSeconds(); 
+
+        date = date + '/' + month + '/' + year + ' ' + hours + ':' + min + ':' + sec;
+        console.log("DATE ::  ", date);
         console.log("LETS THE CHECK LISTNER :: ", myrecorded);
         console.log("LETS THE CHECK Image :: ", imageSrc);
        
@@ -155,7 +165,8 @@ class Bothindialog extends React.Component {
 
         var complainData={
             image:imageSrc,
-            speech:myrecorded
+            speech:myrecorded,
+            time:date
 
             // description:this.authForm.value.description,
           
