@@ -232,10 +232,11 @@ class Bothindialog extends React.Component {
                     <div>
                         <Webcam
                             audio={false}
-                            height={250}
+                           
+                          className="webcam"
                             ref={this.setRef}
                             screenshotFormat="image/jpeg"
-                            width={250}
+                           
                             videoConstraints={videoConstraints}/>
                     </div>
 
@@ -248,7 +249,7 @@ class Bothindialog extends React.Component {
                     </div>
 
                     <div>
-                    <button onClick={this.capture}>Submit</button>
+                    <button  className="button"  onClick={this.capture}>Submit</button>
                     {/* <button onClick={this.handleClose}>click to close</button> */}
                     {/* <button onClick={this.genrateIncometax}>Capture photo</button> */}
                     </div>
